@@ -1,16 +1,19 @@
 
 <svg id="cont" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+<text id="titre" x="490" y="15">Color picker</text>
 
+<text id="c3" x="490" y="200">rgb3</text>
+<text id="c3hsl" x="490" y="235">hsl3</text>
 
-<text id="c3" x="890" y="15">rgb3</text>
-<text id="c3hsl" x="890" y="35">hsl3</text>
+<text id="footer" x="490" y="700">© Developped By MAQDAD Ayoub GLSID2</text>
+
 
 <script xlink:href="picker.js"></script>
 <script>
     var container = document.getElementById("cont");
-    
-    var cp = new ColorPicker(container, 190, 300, 30, 40, 80, 500, 40);
+  
+    var cp3 = new ColorPicker(container, 190, 300, 30, 40, 80, 500, 40);
 
     function makeColorDisplay(id, picker) {
         function displayColor() {
@@ -26,8 +29,8 @@
         displayColor();
     }
 
-   
-    makeColorDisplay("c3", cp);
+
+    makeColorDisplay("c3", cp3);
 
 </script>
 
