@@ -1,0 +1,34 @@
+
+<svg id="cont" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+
+<text id="c3" x="890" y="15">rgb3</text>
+<text id="c3hsl" x="890" y="35">hsl3</text>
+
+<script xlink:href="picker.js"></script>
+<script>
+    var container = document.getElementById("cont");
+    
+    var cp = new ColorPicker(container, 190, 300, 30, 40, 80, 500, 40);
+
+    function makeColorDisplay(id, picker) {
+        function displayColor() {
+            var element = document.getElementById(id);
+            element.firstChild.textContent = picker.getColorRGB();
+
+            element = document.getElementById(id + "hsl");
+            element.firstChild.textContent = picker.getColorHSL();
+
+            setTimeout(displayColor, 1000);
+        }
+
+        displayColor();
+    }
+
+   
+    makeColorDisplay("c3", cp);
+
+</script>
+
+</svg>
